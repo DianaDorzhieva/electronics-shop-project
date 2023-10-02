@@ -26,23 +26,31 @@ class Item:
         with open("items.csv") as file:
             words = csv.DictReader(file)
             items = []
-            print(words)
             for word in words:
                 name = word["name"]
                 price = float(word["price"])
                 quantity = int(word["quantity"])
                 item = cls(name, price, quantity)
                 items.append(item)
+
             cls.all = items
-        return cls.all
+
 
     @staticmethod
     def string_to_number(some_string):
-        return int(some_string)
+        string_number = some_string.split(".")
+        return int(string_number[0])
 
     @property
     def name(self):
         return self.__name
+
+    @name.setter
+    def name(self, name):
+        if len(name) <= 10:
+            self.__name = name
+        else:
+            self.__name = name[0:10]
 
 
     def calculate_total_price(self) -> float:
@@ -61,10 +69,6 @@ class Item:
 
 
 
-with open("items.csv") as file:
- words = csv.DictReader(file)
- items = []
- print(words)
 
 
 
