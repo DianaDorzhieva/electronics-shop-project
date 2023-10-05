@@ -9,7 +9,8 @@ def test_Item_calculate_total_price():
 
 def test_Item_apply_discount():
     numb10 = Item("телефон", 13000, 10)
-    Item.pay_rate = 0.5
+    numb10.pay_rate = 0.5
+    numb10.apply_discount()
     assert numb10.price == 6500
 
 def test_Item_string_to_number():
