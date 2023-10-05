@@ -77,4 +77,13 @@ class Item:
 
 
 
+class Item1:
 
+
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+
+didi = Item1("seat",100,5)
