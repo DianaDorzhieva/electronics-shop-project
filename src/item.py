@@ -75,7 +75,7 @@ class Item:
     def __add__(self, other):
         if issubclass(other.__class__, self.__class__):
             return self.quantity + other.quantity
-        return None
+        raise ValueError("складывать можно только классы Item")
 
 
 
