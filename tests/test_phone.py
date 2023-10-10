@@ -7,5 +7,5 @@ def test__add__():
     it = Item("смартфон", 15000, 15)
     ph = Phone("Суперсмартфон", 13000, 16, 2)
     assert it + ph == 31
-    assert it + 20 == None
-    assert ph + 20 == None
+    assert it + 20 == ValueError("складывать можно только классы Item")
+    assert ph + 20 == ValueError("складывать можно только классы Item")
