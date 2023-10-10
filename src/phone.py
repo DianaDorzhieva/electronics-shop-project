@@ -3,7 +3,7 @@ class Phone(Item):
     def __init__(self, name: str, price: float, quantity: int, number_of_sim:int):
         super().__init__(name, price, quantity)
         self.__number_of_sim = number_of_sim
-        if self.__number_of_sim == 0:
+        if self.__number_of_sim <= 0 or type(self.__number_of_sim) ==float:
             raise ValueError("Количество физических SIM-карт должно быть целым числом больше нуля.")
 
 
