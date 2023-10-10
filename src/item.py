@@ -72,18 +72,13 @@ class Item:
         """
         self.price *= self.pay_rate
 
+    def __add__(self, other):
+        if issubclass(other.__class__, self.__class__):
+            return self.quantity + other.quantity
+        return None
 
 
 
 
 
-class Item1:
 
-
-    def __init__(self, name, price, quantity):
-        self.name = name
-        self.price = price
-        self.quantity = quantity
-
-
-didi = Item1("seat",100,5)
