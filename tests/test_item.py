@@ -41,3 +41,6 @@ def test__add__():
     with pytest.raises(ValueError) as e: _= it + 20
     with pytest.raises(ValueError) as e: _= Phone("Суперсмартфон", 13000, 16, 0)
 
+
+
+
