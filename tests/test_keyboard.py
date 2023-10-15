@@ -8,6 +8,5 @@ def test_change_lang():
     kb.change_lang()
     assert kb.language == "RU"
     mx = Mixinlog()
-    with pytest.raises(AttributeError) as e:
-                         _= mx.language="rk"
+    with pytest.raises(AttributeError) as e:_= mx.language="rk"
 
